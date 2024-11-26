@@ -1,0 +1,46 @@
+﻿  正在验证源
+  正在将源远程复制到“192.168.72.11”
+  正在验证体系结构
+  正在验证体系结构
+  正在启动远程生成
+  正在编译源:
+  server.c
+D:\6daima\Linux\httpser\httpser\server.c(39,38): warning : conversion from ‘int’ to ‘uint16_t’ {aka ‘short unsigned int’} may change value [-Wconversion]
+D:\6daima\Linux\httpser\httpser\server.c(39,38): warning :    39 |         server_addr.sin_port = htons(port);
+D:\6daima\Linux\httpser\httpser\server.c(39,38): warning :       |                                      ^~~~
+D:\6daima\Linux\httpser\httpser\server.c(99,45): warning : unused variable ‘flag’ [-Wunused-variable]
+D:\6daima\Linux\httpser\httpser\server.c(99,45): warning :    99 |                                         int flag = 1;
+D:\6daima\Linux\httpser\httpser\server.c(99,45): warning :       |                                             ^~~~
+D:\6daima\Linux\httpser\httpser\server.c(108,37): warning : unused variable ‘ret’ [-Wunused-variable]
+D:\6daima\Linux\httpser\httpser\server.c(108,37): warning :   108 |                                 int ret = recvHttpRequest(fd, epfd);
+D:\6daima\Linux\httpser\httpser\server.c(108,37): warning :       |                                     ^~~
+D:\6daima\Linux\httpser\httpser\server.c(155,23): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+D:\6daima\Linux\httpser\httpser\server.c(155,23): warning :   155 |         while ((len = recv(cfd, tmp, 1024, 0)) > 0)
+D:\6daima\Linux\httpser\httpser\server.c(155,23): warning :       |                       ^~~~
+D:\6daima\Linux\httpser\httpser\server.c(159,50): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+D:\6daima\Linux\httpser\httpser\server.c(159,50): warning :   159 |                         memcpy(buf + total, tmp, len);
+D:\6daima\Linux\httpser\httpser\server.c(159,50): warning :       |                                                  ^~~
+D:\6daima\Linux\httpser\httpser\server.c(168,30): warning : conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+D:\6daima\Linux\httpser\httpser\server.c(168,30): warning :   168 |                 int reqlen = pt - buf;  //����ͷ�ĳ���
+D:\6daima\Linux\httpser\httpser\server.c(168,30): warning :       |                              ^~
+D:\6daima\Linux\httpser\httpser\server.c(250,74): warning : conversion from ‘__off_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+D:\6daima\Linux\httpser\httpser\server.c(250,74): warning :   250 |                         sendHeadMsg(cfd, 200, "OK", getFileType(file), st.st_size);
+D:\6daima\Linux\httpser\httpser\server.c(250,74): warning :       |                                                                        ~~^~~~~~~~
+D:\6daima\Linux\httpser\httpser\server.c(303,27): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+D:\6daima\Linux\httpser\httpser\server.c(303,27): warning :   303 |                 int len = read(fd, buf, sizeof(buf));
+D:\6daima\Linux\httpser\httpser\server.c(303,27): warning :       |                           ^~~~
+D:\6daima\Linux\httpser\httpser\server.c(305,40): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+D:\6daima\Linux\httpser\httpser\server.c(305,40): warning :   305 |                         send(cfd, buf, len, 0);
+D:\6daima\Linux\httpser\httpser\server.c(305,40): warning :       |                                        ^~~
+D:\6daima\Linux\httpser\httpser\server.c(517,38): warning : implicit declaration of function ‘isxdigit’ [-Wimplicit-function-declaration]
+D:\6daima\Linux\httpser\httpser\server.c(517,38): warning :   517 |                 if(from[0] == '%' && isxdigit(from[1]) && isxdigit(from[2]))
+D:\6daima\Linux\httpser\httpser\server.c(517,38): warning :       |                                      ^~~~~~~~
+D:\6daima\Linux\httpser\httpser\server.c(17,1): message : include ‘<ctype.h>’ or provide a declaration of ‘isxdigit’
+D:\6daima\Linux\httpser\httpser\server.c(17,1): message :    16 | #include <dirent.h>
+D:\6daima\Linux\httpser\httpser\server.c(17,1): message :   +++ |+#include <ctype.h>
+D:\6daima\Linux\httpser\httpser\server.c(17,1): message :    17 |
+D:\6daima\Linux\httpser\httpser\server.c(519,31): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+D:\6daima\Linux\httpser\httpser\server.c(519,31): warning :   519 |                         *to = (hexit(from[1]) << 4) + hexit(from[2]);
+D:\6daima\Linux\httpser\httpser\server.c(519,31): warning :       |                               ^
+  正在链接对象
+  httpser.vcxproj -> D:\6daima\Linux\httpser\httpser\bin\x64\Debug\httpser.out
